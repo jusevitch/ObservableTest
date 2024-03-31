@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Test Page | Test Framework</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="preload" as="style" href="./_npm/katex@0.16.10/dist/katex.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="stylesheet" type="text/css" href="./_npm/katex@0.16.10/dist/katex.min.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/tex.js">
+<link rel="modulepreload" href="./_import/euler_ode.d0119e80.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/_esm.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.14/_esm.js">
+<link rel="modulepreload" href="./_npm/katex@0.16.10/_esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/_esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+
+define({id: "8c32ba5a", outputs: ["tex","basic_ode"], body: async () => {
+const [{default: tex}, {basic_ode}] = await Promise.all([import("./_observablehq/stdlib/tex.js"), import("./_import/euler_ode.d0119e80.js")]);
+
+return {tex,basic_ode};
+}});
+
+define({id: "d4812516", inputs: ["display"], body: (display) => {
+display(1+2);
+}});
+
+define({id: "338a0f76", inputs: ["tex","display"], body: async (tex,display) => {
+display(await(
+tex.block`\int_0^\infty e^{(A(t-\tau))}Bu(\tau) d\tau`
+))
+}});
+
+define({id: "7824d695", inputs: ["view","html"], outputs: ["exponent"], body: (view,html) => {
+const exponent = view(html`<input type=range step=1 min=0 max=4>`);
+return {exponent};
+}});
+
+define({id: "b9ad6e83", inputs: ["exponent","display","Plot"], outputs: ["data","data_x","data_y"], body: (exponent,display,Plot) => {
+const data = [
+    [0,0],
+    [1,1],
+    [2,4],
+    [3,9],
+    [4,16],
+    [5,25],
+];
+
+const data_x = [0,1,2,3,4,5]
+// const data_y = [0, 1, 4, 9, 16, 25];
+const data_y = data_x.map((x) => x**exponent)
+
+// Plot.plot({
+//     x: {
+//         label: "X Value"
+//     },
+//     y: {
+//         label: "Y Value"
+//     },
+//     marks: [
+//         Plot.line(data, {x: "X Value", y: "Y Values"})
+//     ]
+// })
+
+display(
+    Plot.plot({
+        marks: [
+            Plot.lineY(data_y)
+        ]
+    })
+);
+
+// Plot.lineY(data_y).plot()
+return {data,data_x,data_y};
+}});
+
+define({id: "b70a14ee", inline: true, inputs: ["x0","display"], body: async (x0,display) => {
+display(await(
+x0
+))
+}});
+
+define({id: "2cd01229", inputs: ["view","html"], outputs: ["x0"], body: (view,html) => {
+const x0 = view(html`<input type=range step=1 min=-10 max=10>`);
+return {x0};
+}});
+
+define({id: "fefbdb67", inline: true, inputs: ["dt","display"], body: async (dt,display) => {
+display(await(
+dt
+))
+}});
+
+define({id: "ff70a8c3", inputs: ["view","html"], outputs: ["dt"], body: (view,html) => {
+const dt = view(html`<input type=range step=0.001 min=0.001 max=0.05>`);
+dt
+return {dt};
+}});
+
+define({id: "8254c329", inline: true, inputs: ["k","display"], body: async (k,display) => {
+display(await(
+k
+))
+}});
+
+define({id: "4378a2b5", inputs: ["view","html"], outputs: ["k"], body: (view,html) => {
+const k = view(html`<input type=range step=1 min=-10 max=10>`);
+k
+return {k};
+}});
+
+define({id: "086f9918", inline: true, inputs: ["nsteps","display"], body: async (nsteps,display) => {
+display(await(
+nsteps
+))
+}});
+
+define({id: "bedc7374", inputs: ["view","html"], outputs: ["nsteps"], body: (view,html) => {
+const nsteps = view(html`<input type=range step=10 min=10 max=500>`);
+nsteps
+return {nsteps};
+}});
+
+define({id: "d6eb1595", inputs: ["basic_ode","x0","k","dt","nsteps","display","Plot"], outputs: ["sol"], body: (basic_ode,x0,k,dt,nsteps,display,Plot) => {
+const sol = basic_ode(x0, k, dt, nsteps);
+
+display(
+    Plot.plot({
+        marks:[
+            Plot.frame(),
+            Plot.line(sol)
+        ]
+    })
+)
+return {sol};
+}});
+
+define({id: "9e001e68", inline: true, inputs: ["inputBox","display"], body: async (inputBox,display) => {
+display(await(
+inputBox
+))
+}});
+
+define({id: "c96c6d5b", inline: true, inputs: ["input","display"], body: async (input,display) => {
+display(await(
+input
+))
+}});
+
+define({id: "ddd9c3d5", inline: true, inputs: ["hashHex","display"], body: async (hashHex,display) => {
+display(await(
+hashHex.slice(0,7)
+))
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Test Framework</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./example-dashboard">Example dashboard</a></li>
+    <li class="observablehq-link"><a href="./example-report">Example report</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./test">Test Page</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type), h2:first-child, :not(h1) + h2">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#a-test-plot">A Test Plot</a></li>
+<li class="observablehq-secondary-link"><a href="#ode-test">ODE Test</a></li>
+</ol>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div id="cell-8c32ba5a" class="observablehq observablehq--block"></div>
+<h1 id="test-page" tabindex="-1"><a class="observablehq-header-anchor" href="#test-page">Test Page</a></h1>
+<div id="cell-d4812516" class="observablehq observablehq--block"></div>
+<div id="cell-338a0f76" class="observablehq observablehq--block observablehq--loading"></div>
+<h2 id="a-test-plot" tabindex="-1"><a class="observablehq-header-anchor" href="#a-test-plot">A Test Plot</a></h2>
+<div id="cell-7824d695" class="observablehq observablehq--block"></div>
+<div id="cell-b9ad6e83" class="observablehq observablehq--block"></div>
+<h2 id="ode-test" tabindex="-1"><a class="observablehq-header-anchor" href="#ode-test">ODE Test</a></h2>
+<p>x0: <span id="cell-b70a14ee" class="observablehq--loading"></span></p>
+<div id="cell-2cd01229" class="observablehq observablehq--block"></div>
+<p>dt: <span id="cell-fefbdb67" class="observablehq--loading"></span></p>
+<div id="cell-ff70a8c3" class="observablehq observablehq--block"></div>
+<p>k: <span id="cell-8254c329" class="observablehq--loading"></span></p>
+<div id="cell-4378a2b5" class="observablehq observablehq--block"></div>
+<p>nsteps: <span id="cell-086f9918" class="observablehq--loading"></span></p>
+<div id="cell-bedc7374" class="observablehq observablehq--block"></div>
+<div id="cell-d6eb1595" class="observablehq observablehq--block"></div>
+<!-- ## SHA256 Hash
+
+```js
+const inputBox = html`<input type="text" placeholder="anonymous">`;
+const input = Generators.input(inputBox)
+```
+Enter input here: <span id="cell-9e001e68" class="observablehq--loading"></span>
+
+Input: <span id="cell-c96c6d5b" class="observablehq--loading"></span>
+
+```js
+const encoder = new TextEncoder();
+const inputdata = encoder.encode(input);
+```
+
+```js
+const hashBuffer = crypto.subtle.digest("SHA-256", inputdata)
+const hashArray = Array.from(new Uint8Array(hashBuffer));
+const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+```
+SHA256 hash: <span id="cell-ddd9c3d5" class="observablehq--loading"></span> --></main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./example-report"><span>Example report</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-03-31T01:01:22">Mar 31, 2024</a>.</div>
+</footer>
+</div>
